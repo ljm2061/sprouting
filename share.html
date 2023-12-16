@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>싹트는 우리</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+</head>
+  <body>
+<!--업데이트 모달 시작-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title my-1" id="exampleModalLabel">알림</div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="my-3 modal-body text-center">
+        업데이트 중입니다.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--업데이트 모달 끝-->
+
+<!-- 네비게이션 영역 시작 -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="nav">
+  <div class="container">
+
+          <a class="gugi-font navbar-brand" href="index.html" id="logo">
+          <img src="images/logo.png" alt="로고">
+          싹트는 우리</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDarkDropdown">
+            
+            <div class="btn-group">
+              <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                식물 가이드
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="guidemenu.html">일년초</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">숙근초</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">구근류</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">난과식물</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">관엽식물</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">선인장과 다육식물</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">화목류</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">관상수</a></li>
+              </ul>
+            </div>
+
+            <div class="mx-2 btn-group">
+              <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                추천 식물
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="recommendation.html">트렌드 식물</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">봄 식물</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">여름 식물</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">가을 식물</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">겨울 식물</a></li> 
+              </ul>
+            </div>
+
+            <div class="btn-group">
+              <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                커뮤니티
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">식물 종류 Q&A</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">식물 병충해 Q&A</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">식물 생육 Q&A</a></li>
+                <li><hr href="#" class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="share.html">공유숲</a></li>
+              </ul>
+            </div>
+
+            </div>
+          </div>
+        </div>
+      </nav>
+<!-- 네비게이션 영역 끝 -->
+
+
+
+<!--커뮤니티 영역 시작-->
+<section class="bg-dark pt-5 pb-5" id="community">
+  <div class="container overflow-hidden">
+      <div class="py-4">
+        <h3 class="text-white text-center fw-bold">공유숲</h3>
+          <p class="text-white lh-lg text-center">이곳은 식물을 사랑하는 모든 분들을 위한 커뮤니티입니다.</br>경험을 공유하고 소통하며 식물을 키우는 즐거움을 함께 나눠보세요.</p></br>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="images/26.jpg" alt="포트폴리오 사진3" class="img-fluid img-thumbnail">
+                <div class="card-body">
+                  <p class="card-text">안녕하세요~ 여러분 주말 잘 지내셨나요~? 저는 아이들과 함께 주말농장에 갔다 왔어요. 오늘은 열심히 딸기 모종을 심었답니다~뿌듯하네요.ㅎㅎ</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div><i class="bi bi-heart"></i> 2512</div>
+                    <small class="text-muted">55 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="images/16.jpg" alt="포트폴리오 사진3" class="img-fluid img-thumbnail">
+                <div class="card-body">
+                  <p class="card-text">정원이 허전한 것 같아서 흰 튤립을 심어봤어요. 흰 튤립은 향기롭거나 색이 화려한 꽃은 아니지만 매력이 있는 것 같아요. 꽃이 오래 펴있으면 좋겠네요.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div><i class="bi bi-heart"></i> 1452</div>
+                    <small class="text-muted">53 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+                <div class="card shadow-sm">
+                  <img src="images/31.jpg" alt="포트폴리오 사진3" class="img-fluid img-thumbnail">
+                  <div class="card-body">
+                    <p class="card-text">저번에 파종한 래디쉬 드디어 수확했어요! 쨍한 핑크빛으로 이쁘게 잘 자랐어요. 피클로 담가먹고 샐러드도 해먹을 거예요. 기대되네요!</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div><i class="bi bi-heart"></i> 1003</div>
+                      <small class="text-muted">50 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="images/34.jpg" alt="포트폴리오 사진3" class="img-fluid img-thumbnail">
+                  <div class="card-body">
+                    <p class="card-text">요즘에 저는 테라리움에 빠졌습니다~ 책상 위 작은 자연이랍니다~! 집에 유리 어항이나 작은 유리병 있으면 한번 만들어 보세요.
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div><i class="bi bi-heart"></i>  994</div>
+                      <small class="text-muted">47 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="images/5.jpg" alt="포트폴리오 사진3" class="img-fluid img-thumbnail">
+                  <div class="card-body">
+                    <p class="card-text">거베라가 참 이쁘죠? 화병에 간단히 꽂아만 놨는데 집안 분위기가 사랑스럽게 변해요ㅎㅎㅎ 요즘 절화 꽃이 비싼데 텅장 되겠어요~</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div><i class="bi bi-heart"></i> 515</div>
+                      <small class="text-muted">36 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="images/2.jpg" alt="포트폴리오 사진3" class="img-fluid img-thumbnail">
+                  <div class="card-body">
+                    <p class="card-text">식집사가 되고 나서 가장 좋은 점 중 하나는 요리할 때 허브를 살 필요가 없다는 거에요ㅋㅋ 그냥 옆에 있는 로즈마리 꺾어다가 닭 요리에 투척!!
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div><i class="bi bi-heart"></i> 512</div>
+                      <small class="text-muted">25 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="images/17.jpg" alt="포트폴리오 사진3" class="img-fluid img-thumbnail">
+                <div class="card-body">
+                  <p class="card-text">잡초 뽑기 삼매경! 어찌나 생명력이 강하던지!! 잡초는 뽑아도 뽑아도 끝이 없어요...! 그렇지만 제 소중한 정원을 위해 열심히 해야죠..</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                      <div><i class="bi bi-heart"></i> 502</div>
+                    <small class="text-muted">5 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <a class="btn ms-2 btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button">
+            </br></br></br></br><svg class="mt-3" xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+              </svg>
+            </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  <!--커뮤니티 영역 끝-->
+
+<!-- 풋터 시작 -->
+<footer class="bg-dark">
+  <div class="container text-white text-center">
+      <p class="py-4 mb-0">Copyright <i class="bi bi-c-circle"></i> 2023 Designed by 
+        <a href="index.html" class="gugi-font link-light text-decoration-none" id="logo">싹트는 우리</a>
+      </p>
+</footer>
+<!-- 풋터 끝 -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>

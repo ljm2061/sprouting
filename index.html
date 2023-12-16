@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>싹트는 우리</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+</head>
+  <body>
+
+<!--업데이트 모달 시작-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title my-1" id="exampleModalLabel">알림</div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="my-3 modal-body text-center">
+        업데이트 중입니다.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--업데이트 모달 끝-->
+
+<!-- 네비게이션 영역 시작 -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="nav">
+  <div class="container">
+
+          <a class="gugi-font navbar-brand" href="index.html" id="logo">
+          <img src="images/logo.png" alt="로고">
+          싹트는 우리</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDarkDropdown">
+            
+            <div class="btn-group">
+              <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                식물 가이드
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="guidemenu.html">일년초</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">숙근초</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">구근류</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">난과식물</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">관엽식물</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">선인장과 다육식물</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">화목류</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">관상수</a></li>
+              </ul>
+            </div>
+
+            <div class="mx-2 btn-group">
+              <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                추천 식물
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="recommendation.html">트렌드 식물</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">봄 식물</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">여름 식물</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">가을 식물</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">겨울 식물</a></li> 
+              </ul>
+            </div>
+
+            <div class="btn-group">
+              <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                커뮤니티
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">식물 종류 Q&A</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">식물 병충해 Q&A</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">식물 생육 Q&A</a></li>
+                <li><hr href="#" class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="share.html">공유숲</a></li>
+              </ul>
+            </div>
+
+            </div>
+          </div>
+        </div>
+      </nav>
+<!-- 네비게이션 영역 끝 -->
+
+<!--메인헤더 영역 시작-->
+    <header class="vh-100 text-white d-flex flex-column justify-content-center align-items-center" id="header">
+        <h1 class="display-3 fw-bold mb-3" id="logo">싹트는 우리</h1>
+        <p class="lead mb-5">당신과 함께 성장하는 식물 가이드</p>
+        <a class="btn btn-outline-light" href="guidemenu.html" role="button">식물 가이드 바로가기</a>
+    </header>
+<!--메인헤더 영역 끝-->
+
+<!--네비게이션2 영역 시작-->
+<nav class="navbar sticky-top justify-content-center bg-white">
+  <div class="mt-5 pt-3 mb-1">
+    <ul class="nav nav-pills nav-fill">
+      <li class="nav-item me-4">
+        <a class="btn btn-dark" href="#header" role="button">Top</a>
+      <li class="nav-item me-4">
+        <a class="btn btn-dark" href="#best" role="button">BEST 식물 가이드</a>
+      </li>
+      <li class="nav-item me-4">
+        <a class="btn btn-dark" href="#trend" role="button">최근 트랜드 식물</a>
+      </li>
+      <li class="nav-item me-4">
+        <a class="btn btn-dark" href="#QA" role="button">Q&A</a>
+      </li>
+      <li class="nav-item">
+        <a class="btn btn-dark" href="#share" role="button">공유숲</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!--네비게이션2 영역 끝-->
+
+
+
+<!--베스트 식물 가이드 영역 시작-->
+<section class="container" id="best">
+    <div class="py-5 mt-2">
+      <h2 class="text-center text-dark border-bottom">BEST 식물 가이드</h2>
+      <p class="text-center text-muted">사람들에게 꾸준히 사랑받고 있는 식물들을 소개합니다. </br> 다양한 식물들 중에서 어떤 것이 인기 있는지, 그리고 각각의 특성과 키우는 법을 살펴보세요.</p>
+      <div class="container overflow-hidden">
+              <div class="row pb-3  g-4">
+                    <div class="col-sm-6 col-lg-4">
+                      <a class="btn btn-light" href="guide.html" role="button"><img src="images/8.jpg" alt="포트폴리오 사진1" class="img-fluid ">메리골드</a>
+                      </div>
+                    <div class="col-sm-6 col-lg-4">
+                      <a class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button"><img src="images/6.jpg" alt="나팔꽃" class="img-fluid ">나팔꽃</a>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <a class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button"><img src="images/3.jpg" alt="시클라멘" class="img-fluid ">시클라멘</a>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <a class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button"><img src="images/9.jpg" alt="로즈마리" class="img-fluid ">로즈마리</a>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                      <a class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button"><img src="images/13.jpg" alt="코스모스" class="img-fluid ">코스모스</a>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                      <a class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button"><img src="images/10.jpg" alt="바질" class="img-fluid ">바질</a>
+
+                    </div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                      <a class="icon-link icon-link-hover link-dark link-underline-dark link-underline-opacity-25" href="guidemenu.html">
+                        더보기
+                        <svg class="bi" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg><use xlink:href="#arrow-right"></use></svg>
+                      </a>
+                    </div>
+              </div>
+        </div>
+    </div>
+  </section>
+    <!--베스트 식물 가이드 영역 끝-->
+
+    <!--추천 식물 시작-->
+    <section class="container pb-5 pt-3" id="trend">
+      <div class="py-5">
+        <h2 class="text-center text-dark border-bottom">최근 트렌드 식물</h2>
+          <p class="text-center text-muted ">시즌별로 멋진 식물들을 소개하고, 그에 관련된 다양한 이야기를 들려주고 있습니다.</br>크리스마스에는 어떤 식물이 주목받고 있는지 확인해 보세요.</p>
+          <div class="container overflow-hidden">
+              <div class="row pb-5 pt-4 g-4">
+                <div id="carouselExampleCaptions" class="carousel slide">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/29.jpg" class="d-block w-100" alt="...">
+                      <div class="carousel-caption d-none d-md-block">
+                      <p>포인세티아</p>
+                      <a class="btn mb-5 btn-outline-light" href="recommendation.html" role="button">포인세티아 소개 보러가기</a>
+
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/20.jpg" class="d-block w-100" alt="...">
+                      <div class="carousel-caption d-none d-md-block">
+                        <p>호랑가시나무</p>
+                        <a class="btn mb-5 btn-outline-light" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button">호랑가시나무 소개 보러가기</a>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/3.jpg" class="d-block w-100 h-200" alt="...">
+                      <div class="carousel-caption d-none d-md-block">
+                        <p>시클라멘</p>
+                        <a class="btn mb-5 btn-outline-light" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button">시클라멘 소개 보러가기</a>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                    <a class="icon-link icon-link-hover link-dark link-underline-dark link-underline-opacity-25" href="recommendation.html">
+                      더보기
+                      <svg class="bi" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg><use xlink:href="#arrow-right"></use></svg>
+                    </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+<!--Q&A 영역 시작-->
+    <section class="pb-5" id="QA">
+        <div class="container overflow-hidden">
+            <div class="pb-4">
+              <h2 class="text-center text-dark border-bottom">Q&A</h2>
+                <p class="text-center text-muted">식물에 관한 궁금증을 풀고 싶거나 정보를 나누고 싶은 모든 분들을 위한 공간이 여기 있습니다.</br>다양한 사람들과 질문하고 답하면서 여러분의 지식과 경험을 공유해 보세요.</p>
+            </div>
+            <div class="row pb-5 g-4">
+                <div class="col-sm-4 col-lg-4">
+                    <p class="text-center">식물 종류</p>
+                    <table class="rounded-0 text-center table table-light table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">조회</th>
+                          </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                          <tr>
+                            <th scope="row">1</th>
+                            <td><a href="#" class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                이거 뭔가요?
+                              </a></td>
+                            <td>682</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td><a href="#" class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                장미가 맞나요???
+                              </a></td>
+                            <td>452</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td><a href="#" class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                이게 뭐죠
+                              </a></td>
+                            <td>254</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td><a href="#" class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                이름 알려주세요.
+                              </a></td>
+                            <td>183</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td><a href="#" class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              무슨 꽃인가요?
+                              </a></td>
+                            <td>144</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                      <a class="icon-link icon-link-hover link-dark link-underline-dark link-underline-opacity-25" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        더보기
+                        <svg class="bi" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg><use xlink:href="#arrow-right"></use></svg>
+                      </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-lg-4">
+                    <p class="text-center">식물 병충해</p>
+                    <table class="rounded-0 text-center table table-light table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">조회</th>
+                          </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                          <tr>
+                            <th scope="row">1</th>
+                            <td><a href="#" class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                반점병인가요?
+                              </a></td>
+                            <td>855</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td><a href="#" class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                곰팡이 문제
+                              </a></td>
+                            <td>757</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td><a href="#" class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                무슨 병인가요?
+                              </a></td>
+                            <td>541</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td><a href="#" class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                총채벌레 박멸
+                              </a></td>
+                            <td>748</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td><a href="#" class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                모자이크 병?
+                              </a></td>
+                            <td>455</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                        <a class="icon-link icon-link-hover link-dark link-underline-dark link-underline-opacity-25" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          더보기
+                          <svg class="bi" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                          </svg><use xlink:href="#arrow-right"></use></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-lg-4">
+                    <p class="text-center">식물 생육</p>
+                    <table class="rounded-0 text-center table table-light table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">조회</th>
+                          </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                          <tr>
+                            <th scope="row">1</th>
+                            <td><a href="#" class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                접목 방식 추천
+                              </a></td>
+                            <td>957</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td><a href="#" class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                삽목하면 되나요?
+                              </a></td>
+                            <td>755</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td><a href="#" class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                월동 알려주세요!
+                              </a></td>
+                            <td>566</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td><a href="#" class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                튤립 꽃 피우기
+                              </a></td>
+                            <td>454</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td><a href="#" class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                꽃이 안 펴요!
+                              </a></td>
+                            <td>120</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                        <a class="icon-link icon-link-hover link-dark link-underline-dark link-underline-opacity-25" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          더보기
+                          <svg class="bi" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                          </svg><use xlink:href="#arrow-right"></use></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--Q&A 영역 끝-->
+
+<!--공유숲 영역 시작-->
+<section class="bg-dark text-white pt-5 pb-5" id="share">
+  <div class="container overflow-hidden">
+      <div class="py-4">
+        <h2 class="text-center border-bottom">공유숲</h2>
+          <p class="text-center">이곳은 식물을 사랑하는 모든 분들을 위한 커뮤니티입니다.</br>경험을 공유하고 소통하며 식물을 키우는 즐거움을 함께 나눠보세요.</p></br>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="images/26.jpg" alt="포트폴리오 사진3" class="img-fluid img-thumbnail">
+                <div class="card-body">
+                  <p class="card-text">안녕하세요~ 여러분 주말 잘 지내셨나요~? 저는 아이들과 함께 주말농장에 갔다 왔어요. 오늘은 열심히 딸기 모종을 심었답니다~뿌듯하네요.ㅎㅎ</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div><i class="bi bi-heart"></i> 2512</div>
+                    <small class="text-muted">55 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="images/16.jpg" alt="포트폴리오 사진3" class="img-fluid img-thumbnail">
+                <div class="card-body">
+                  <p class="card-text">정원이 허전한 것 같아서 흰 튤립을 심어봤어요. 흰 튤립은 향기롭거나 색이 화려한 꽃은 아니지만 매력이 있는 것 같아요. 꽃이 오래 펴있으면 좋겠네요. </p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div><i class="bi bi-heart"></i> 1452</div>
+                    <small class="text-muted">53 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="images/31.jpg" alt="포트폴리오 사진3" class="img-fluid img-thumbnail">
+                <div class="card-body">
+                  <p class="card-text">저번에 파종한 래디쉬 드디어 수확했어요! 쨍한 핑크빛으로 이쁘게 잘 자랐어요. 피클로 담가먹고 샐러드도 해먹을 거예요. 기대되네요! </p>
+                  <div class="d-flex justify-content-between align-items-center">
+                      <div><i class="bi bi-heart"></i> 1003</div>
+                    <small class="text-muted">50 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-center mb-3">
+      <a class="icon-link icon-link-hover link-light link-underline-light link-underline-opacity-25" href="share.html">
+        더보기
+        <svg class="bi" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+        </svg><use xlink:href="#arrow-right"></use></svg>
+      </a>
+  </div>
+  </section>
+  <!--커뮤니티 영역 끝-->
+
+<!-- SNS 섹션 시작 -->
+<section class="py-5" id="sns">
+    <div class="container text-center text-white">
+        <h2 class="mb-3" id="logo">싹트는 우리</h2>
+        <div class="d-flex justify-content-evenly px-5 mt-4 w-50 m-auto">
+            <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-dark btn-lg px-4"><i class="bi bi-youtube"></i></a>
+            <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-dark btn-lg px-4"><i class="bi bi-facebook"></i></a>
+            <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-dark btn-lg px-4"><i class="bi bi-instagram"></i></a>
+        </div>
+    </div>
+</section>
+<!-- SNS 섹션 끝 -->
+
+<!-- 풋터 시작 -->
+    <footer class="bg-dark">
+        <div class="container text-white text-center">
+            <p class="py-4 mb-0">Copyright <i class="bi bi-c-circle"></i> 2023 Designed by 
+              <a href="#header" class="gugi-font link-light text-decoration-none" id="logo">싹트는 우리</a>
+            </p>
+    </footer>
+<!-- 풋터 끝 -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>

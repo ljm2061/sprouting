@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>싹트는 우리</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+</head>
+  <body>
+<!--업데이트 모달 시작-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title my-1" id="exampleModalLabel">알림</div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="my-3 modal-body text-center">
+        업데이트 중입니다.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--업데이트 모달 끝-->
+
+<!-- 네비게이션 영역 시작 -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="nav">
+  <div class="container">
+
+          <a class="gugi-font navbar-brand" href="index.html" id="logo">
+          <img src="images/logo.png" alt="로고">
+          싹트는 우리</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDarkDropdown">
+            
+            <div class="btn-group">
+              <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                식물 가이드
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="guidemenu.html">일년초</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">숙근초</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">구근류</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">난과식물</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">관엽식물</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">선인장과 다육식물</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">화목류</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">관상수</a></li>
+              </ul>
+            </div>
+
+            <div class="mx-2 btn-group">
+              <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                추천 식물
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="recommendation.html">트렌드 식물</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">봄 식물</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">여름 식물</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">가을 식물</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">겨울 식물</a></li> 
+              </ul>
+            </div>
+
+            <div class="btn-group">
+              <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                커뮤니티
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">식물 종류 Q&A</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">식물 병충해 Q&A</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">식물 생육 Q&A</a></li>
+                <li><hr href="#" class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="share.html">공유숲</a></li>
+              </ul>
+            </div>
+
+            </div>
+          </div>
+        </div>
+      </nav>
+<!-- 네비게이션 영역 끝 -->
+
+<!--목차 영역 시작-->
+<div class="container">
+ <div class="row mt-5">
+   <div class="mt-5 col-sm-12 col-lg-2">
+     <h5 class="fw-bold text-dark mb-3 text-center">식물 가이드</h5>
+
+     <div class="accordion" id="accordionExample">
+       <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          일년초</button>
+       </h2>
+       <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+         <div class="accordion-body">
+           <div class="list-group-flush list-group">
+            <a href="guidemenu.html" class="list-group-item list-group-item-dark">춘파일년초</a>
+             <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="list-group-item list-group-item-action">추파일년초</a>
+           </div>
+         </div>
+       </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            숙근초
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <div class="list-group-flush list-group">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="list-group-item list-group-item-action">노지숙근초</a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="list-group-item list-group-item-action">온실숙근초</a>
+            </div>
+          </div>
+        </div>
+      </div>
+            
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            구근류
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <div class="list-group-flush list-group">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="list-group-item list-group-item-action">춘식구근</a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="list-group-item list-group-item-action">추식구근</a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="list-group-item list-group-item-action">온실구근</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            난과식물
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <div class="list-group-flush list-group">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="list-group-item list-group-item-action">동양란</a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="list-group-item list-group-item-action">서양란</a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="list-group-item list-group-item-action">자생란</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            관엽식물
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <div class="list-group-flush list-group">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="list-group-item list-group-item-action">관엽식물</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+            선인장·다육식물
+          </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <div class="list-group-flush list-group">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="list-group-item list-group-item-action">선인장</a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="list-group-item list-group-item-action">다육식물</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+            화목류
+          </button>
+        </h2>
+        <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <div class="list-group-flush list-group">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="list-group-item list-group-item-action">교목성 화목류</a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="list-group-item list-group-item-action">관목성 화목류</a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="list-group-item list-group-item-action">온실 화목류</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+            관상수
+          </button>
+        </h2>
+        <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <div class="list-group-flush list-group">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="list-group-item list-group-item-action"녹음수</a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="list-group-item list-group-item-action">산울타리</a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="list-group-item list-group-item-action">덩굴성식물</a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="list-group-item list-group-item-action">지피식물</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+     <!--목차 영역 끝-->
+  
+      <div class="col-sm-12 col-lg-10">
+        <!-- 메리골드 설명 시작 -->
+        <section class="container pt-5" id="about-chef">
+    
+            <div class="text-center pt-5">
+                <h3 class="fw-bold">메리골드</h3>
+                <p class="lh-lg text-muted">황금빛 꽃망울이 피어나는 그 순간에 희망과 따뜻함이 느껴지는 마법 같은 꽃.</p>
+            </div>
+    
+            <div id="carouselExampleInterval" class="ms-2 container carousel slide justify-content-center" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="images/8.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="images/21.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/22.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </br>
+              <div class="card ms-3 mb-3;">
+                <div class="row g-0">
+                    <div class="card-body">
+                      <h5 class="card-title fw-bold">식물 소개</h5>
+                      <p class="card-text lh-lg">
+                        메리골드(Marigold)는 뉴멕시코에서 북미의 일부 지역 및 아르헨티나에서 비롯되어, 15~90cm 정도로 자라는 황색, 오렌지색의 아름다운 꽃입니다.</br></br>
+ 파종 시기는 2월에서 6월까지로, 식물을 키우기 위해서는 이 기간에 씨앗을 심어야 합니다. 씨앗을 토양에 심기 시작하면, 메리골드는 그 화려한 꽃을 피우기 위해 필요한 수분, 햇볕, 그리고 영양분을 적절히 공급받아야 합니다.</br></br>
+ 메리골드는 주로 6월에서 10월 사이에 개화되는데, 이 기간 동안에는 황금빛 꽃망울이 활짝 피어나 정원을 화사하게 만듭니다. 꽃말은 '반드시 오고야 말 행복'으로 긍정적인 에너지를 얻을 수 있는 꽃입니다.
+                      </p>
+                    </div>
+                  </div>
+              </div>
+            </br>
+            <div class="row row-cols-1 row-cols-md-2 ms-2 g-4">
+                <div class="col">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="card-text">
+                        
+                      <div class="container text-center">
+                        <div class="row">
+                          <div class="col-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-droplet-half" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M7.21.8C7.69.295 8 0 8 0c.109.363.234.708.371 1.038.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 0 1-12 0C2 6.668 5.58 2.517 7.21.8zm.413 1.021A31.25 31.25 0 0 0 5.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10c0 0 2.5 1.5 5 .5s5-.5 5-.5c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z"/>
+                            <path fill-rule="evenodd" d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448z"/>
+                          </svg>
+                        </div>
+                          <div class="col-8 mt-2 fw-bold mb-2">건조한 것을 좋아해요.</br>흙이 말랐을 때 물을 주세요.</div>
+                        </div>
+                      </div>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="card-text">
+                        <div class="container text-center">
+                          <div class="row">
+                            <div class="col-4">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-thermometer-half" viewBox="0 0 16 16">
+                                <path d="M9.5 12.5a1.5 1.5 0 1 1-2-1.415V6.5a.5.5 0 0 1 1 0v4.585a1.5 1.5 0 0 1 1 1.415z"/>
+                                <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1z"/>
+                            </svg>
+                          </div>
+                          <div class="col-8 mt-2 fw-bold">따뜻한 곳을 좋아해요.</br>10~22℃가 가장 좋아요.</div>
+                          </div>
+                        </div>
+                      </p>                    
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="card-text">
+                        <div class="container text-center">
+                          <div class="row">
+                            <div class="col-4">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 16 16">
+                                <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                              </svg>
+                          </div>
+                          <div class="col-8 mt-2 fw-bold">직사광선을 좋아해요.</br>양지 바른 곳에 놓아주세요.</div>
+                          </div>
+                        </div>                      
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="card-text">
+                        <div class="container text-center">
+                          <div class="row">
+                            <div class="col-4">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-minecart-loaded" viewBox="0 0 16 16">
+                                <path d="M4 15a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm0 1a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8-1a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm0 1a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM.115 3.18A.5.5 0 0 1 .5 3h15a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 14 12H2a.5.5 0 0 1-.491-.408l-1.5-8a.5.5 0 0 1 .106-.411zm.987.82 1.313 7h11.17l1.313-7H1.102z"/>
+                                <path fill-rule="evenodd" d="M6 1a2.498 2.498 0 0 1 4 0c.818 0 1.545.394 2 1 .67 0 1.552.57 2 1h-2c-.314 0-.611-.15-.8-.4-.274-.365-.71-.6-1.2-.6-.314 0-.611-.15-.8-.4a1.497 1.497 0 0 0-2.4 0c-.189.25-.486.4-.8.4-.507 0-.955.251-1.228.638-.09.13-.194.25-.308.362H3c.13-.147.401-.432.562-.545a1.63 1.63 0 0 0 .393-.393A2.498 2.498 0 0 1 6 1z"/>
+                              </svg>
+                          </div>
+                          <div class="col-8 mt-2 fw-bold">일주일 간격으로 </br>물거름을 물 줄 때 같이 줍니다. </div>
+                          </div>
+                        </div>                       
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </br>
+
+              <div class="card ms-3 mb-3;">
+                <div class="row g-0">
+                    <div class="card-body">
+                      <h5 class="card-title fw-bold ">주의사항</h5>
+                      <p class="card-text lh-lg">
+                        응애벌레를 조심해야 합니다. 잎 뒷면에서 잎을 흡즙하므로 피해를 받은 잎에서는 흰 반점이 나타나고 심하면 갈변하고 낙엽집니다. </br> 화단을 높이거나 배수를 잘 되게 하여 병발생을 예방합니다.
+                      </p>
+                    </div>
+                  </div>
+              </div> <p class="text-muted text-end mt-1 fs-6">출처: <a class="text-muted" href="http://www.nongup.gyeonggi.kr">경기도농업기술원</a> </p>
+    
+        </section>
+        <!-- 메리골드 설명 섹션 끝 -->
+    </br>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end pb-3 mb-2">
+      <a class="btn btn-dark" href="guidemenu.html" role="button">뒤로가기</a>
+        </div>
+    </div>
+  </div>
+  
+</div>
+
+            
+
+
+
+<!-- 풋터 시작 -->
+<footer class="bg-dark">
+  <div class="container text-white text-center">
+      <p class="py-4 mb-0">Copyright <i class="bi bi-c-circle"></i> 2023 Designed by 
+        <a href="index.html" class="gugi-font link-light text-decoration-none" id="logo">싹트는 우리</a>
+      </p>
+</footer>
+<!-- 풋터 끝 -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    </body>
+  </html>
